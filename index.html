@@ -1,4 +1,9 @@
 <!doctype html>
+<!--
+	Author:  	Brett Schultz
+	Resources:	
+		Header:  https://bootsnipp.com/snippets/featured/resize-amp-fixed-header-shrinking-header
+-->
 <html lang="en">
 
 	<head>
@@ -10,18 +15,113 @@
 		<title>inside out html5 app</title>
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-				
+			
+		<link rel="stylesheet" href="assets/css/header-resize.css">
+		
+		<link rel="stylesheet" href="assets/css/footer.css">
+		
+		<script>
+    		function init() {
+				window.addEventListener('scroll', function(e){
+					var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+						shrinkOn = 300,
+						header = document.querySelector("header");
+					if (distanceY > shrinkOn) {
+						classie.add(header,"smaller");
+					} else {
+						if (classie.has(header,"smaller")) {
+							classie.remove(header,"smaller");
+						}
+					}
+				});
+			}
+			
+			window.onload = init();
+			
+		</script>
+		
 	</head>
 	
 	<body>
 		
-		
+		<div id="wrapper">
+
+		<header>
+			<div class="container clearfix">
+				<h1 id="logo">
+					Brett Schultz IT
+				</h1>
+				<nav>
+					<a href="">Home</a>
+					<a href="">About</a>
+					<a href="">Contact</a>
+				</nav>
+			</div>
+		</header><!-- /header -->
+
+		<div id="main">
+			<div id="content">
+				<section>
+					<div class="container">
+						<h1>We Make 'IT' Work for You!</h1>
+						<p>Welcome</p>
+						<p>Thanks for visiting</p>
+						<p>
+							<a href="https://www.facebook.com/pratik.chauhan.cp">« Connect With Me | Chauhan PRatik</a><br>
+							<a href="http://bootsnipp.com/cppratikcp">« Go back to all tutorials?</a>
+						</p>
+					</div>
+				</section>
+				<section class="color">
+					<div class="container">
+						<h1>Text</h1>
+						<p>Text</p>
+						<p>Text</p>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<h1>Text</h1>
+						<p>Text</p>
+						<p>Text</p>
+					</div>
+				</section>
+				<section class="color">
+					<div class="container">
+						<h1>Text</h1>
+						<p>Text</p>
+						<p>Text</p>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<h1>Text</h1>
+						<p>Text</p>
+						<p>Text</p>
+					</div>
+				</section>
+			</div>
+			
+		</div><!-- #main -->
+
+			<footer>
+				<div id="info-bar">
+					<div class="container clearfix">
+						<span class="all-tutorials"><a href="http://bootsnipp.com/cppratikcp">← all tutorials</a></span>
+						<span class="back-to-tutorial"><a href="https://www.facebook.com/pratik.chauhan.cp">CHUAHAN PRATIK</a></span>
+					</div>
+				</div><!-- /#top-bar -->
+			</footer><!-- /footer -->
+			
+		</div><!-- /#wrapper -->
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		
+		<script src="assets/js/header-resize.js"></script>
 		
 	</body>
 	
